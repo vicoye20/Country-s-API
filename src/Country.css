@@ -157,12 +157,12 @@ b{
     }
     img{
         height: 200px;
-        width: 350px;
+        width: 450px;
     }
     
     .meet{
         height: 400px;
-        width: 350px;
+        width: 450px;
         background-color: whitesmoke;
         margin: auto;
     }
@@ -170,7 +170,7 @@ b{
     .div3{
         margin: auto;
         height: 200px;
-        width: 350px;
+        width: 450px;
     }
     h3{
         font-size: 18px;
@@ -201,7 +201,7 @@ b{
     .div1{
         background-color: white;
         display: grid;
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(2,1fr);
         gap: 10px;
         padding-top: 63px;
     }
@@ -239,12 +239,12 @@ b{
     }
     img{
         height: 200px;
-        width: 100%;
+        width: 450px;
     }
     
     .meet{
         height: 400px;
-        width: 100%;
+        width: 450px;
         background-color: whitesmoke;
         margin: auto;
     }
@@ -252,7 +252,7 @@ b{
     .div3{
         margin: auto;
         height: 200px;
-        width: 100%;
+        width: 450px;
     }
     h3{
         font-size: 18px;
