@@ -10,6 +10,7 @@ const Country = () => {
   const [select, setSelect] = useState('');
   const [currentPage,setCurrentPage] = useState(1);
   const [countryPerPage,setCountryPerPage] = useState(20);
+  const [bgColor, setBgColor] = useState(false)
   
   const lastCountry = currentPage * countryPerPage
   const firstCountry = lastCountry - countryPerPage
@@ -58,14 +59,19 @@ const Country = () => {
     }
   }
 
+  const dark = ()=>{
+    setBgColor(!bgColor)
+  }
+
   return (
   
     <div>
        
-
-        <div className='nav'>
+        
+        <div className='nav' style={{backgroundColor:bgColor? 'lightblue': 'lightgreen'}}>
         
            <h6>Rest Countries API with Color Theme Switcher Master</h6>
+
           <input type="text" placeholder='Search Region' onChange={(event) => handleChanged(event)} />
 
           <select
@@ -79,9 +85,12 @@ const Country = () => {
         
           </select>
 
-        </div>
+          <button className='btn1' onClick={dark}>Dark Mode</button>
 
-        <div  className='div1'>
+        </div>
+        
+
+        <div  className='div1' style={{backgroundColor:bgColor? 'black': ''}}>
 
         { foundRegion.length > 0
         ? foundRegion.map((country) =>{
@@ -119,11 +128,11 @@ const Country = () => {
 
           <footer>
 
-              <button onClick={()=>handleBack()}>Previous</button>
+              <button className='btn' onClick={()=>handleBack()}>Previous</button>
               {pageNumber.map((page)=>{
                 return <b onClick={()=>setCurrentPage(page)} style={{cursor:'pointer'}}>{page}</b>
               })}
-              <button onClick={()=>handleNext()}>Next</button>
+              <button className='btn' onClick={()=>handleNext()}>Next</button>
 
           </footer>
 
