@@ -92,6 +92,10 @@ const Country = () => {
         <button className="btn1" onClick={dark}>
           Dark Mode
         </button>
+
+        <button className="btn2" onClick={dark}>
+          Dark
+        </button>
       </div>
 
       <div className="div1" style={{ backgroundColor: bgColor ? "black" : "" }}>
